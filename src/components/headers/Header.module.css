@@ -1,0 +1,31 @@
+.nav_item {
+    font-size: 19px;
+    list-style-type: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav_item:hover {
+    border-bottom: 2px solid #fff;
+    transition: all 0.2s ease-out;
+    padding-bottom: 0px
+}
+
+.nav_menu {
+    display: flex;width: 100%;
+    gap: 100px;
+    padding: 0 80px;
+}
+
+.navbar {
+    background: #696969;
+    background: rgba(0,0,0,0.4);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}

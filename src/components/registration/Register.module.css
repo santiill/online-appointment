@@ -1,0 +1,22 @@
+.registration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration_cont {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    border: 1px solid #04bbce;
+}
+.form {
+    width:  400px;
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}

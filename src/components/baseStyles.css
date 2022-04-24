@@ -1,0 +1,37 @@
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid #DBDBDB;
+    font-size: 14px;
+    background: #e8f0fe;
+    outline: none;
+    border-radius: 3px;
+}
+
+.label {
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.input_cont {
+    text-align: start;
+}
+.button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #04bbce;
+    color: #fff;
+    border: 2px solid #04bbce;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+.button:hover {
+    background: white;
+    color: #04bbce;
+    cursor: pointer;
+}

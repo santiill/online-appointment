@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-style: sans-serif;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  header {
+    height: 1000px;
+    width: 100%;
+    background: url("../../../public/1.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+  }
+  header:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.3;
+    z-index: 1;
+  }
+  .navbar{
+    position: relative;
+    color: white;
+    z-index: 2;
+  }
+  
+  .nav {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar {
+    padding: 20px;
+    display: flex;
+    font-size: 20px;
+  }
+  .navbar a{
+    margin-right: 100px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .reg {
+    position: relative;
+    z-index: 2;
+    margin-top: 300px;
+    color: #fff;
+  }
+  .reg h1{
+  
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 44px;
+    letter-spacing: 5px;
+    color: #fff;
+  }
+  
+  .line {
+    border-top: 2px solid #fff;
+    width: 400px;
+    text-align: center;
+    margin: 30px  auto 0;
+  }
+  .reg h3{
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 26px;
+  }
+  
+  .reg button {
+    box-shadow: 0 0 18px hsl(0deg 0% 100% / 79%);
+    font-size: 30px;
+    letter-spacing: 0.4px;
+    margin-top: 50px;
+    padding: 20px 120px;
+    background-color: #04bbce;
+    color: #fff;
+    border: 3px solid #04bbce;
+    border-radius: 7px !important;
+    transition: all .3s ease-in;
+  }
+  
+  
+  .reg button:hover {
+    background-color: #fff;
+    color: #000;
+    
+  
+  }
+  section {
+  
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 500px ;
+  }
+  .appointment .line {
+    margin-top: 50px;
+    border-top: 3px solid #000;
+    width: 80px;
+  }
+  .appointment h1{
+    margin-top: 30px;
+    font-size: 36px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+  
+  .appointment p{
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .var {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .option {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    align-items: center;
+    
+  }
+  .option .num{
+    border: 1px solid #04bbce;
+    padding: 13px 26px;
+    border-radius: 50%;
+    margin-right: 20px;
+    color: #fff;
+    font-size: 32px;
+    background-color: #04bbce;
+  }
+  .option p{
+    font-size: 22px;
+    
+  }
+  footer {
+    background-color: #04bbce;
+  }
+  .container {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 50px 0;
+  
+  }
+  .container p{
+    font-size: 26px;
+    color: #fff;
+  }
+  
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
