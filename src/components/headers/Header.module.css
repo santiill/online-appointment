@@ -12,19 +12,20 @@
 }
 
 .nav_menu {
-    display: flex;width: 100%;
+    display: flex;
+    width: 100%;
     gap: 100px;
     padding: 0 80px;
 }
 
 .navbar {
-    background: #696969;
-    background: rgba(0,0,0,0.4);
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
+    /* background: #696969;
+    background: rgba(0,0,0,0.4); */
+    /* height: 80px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* font-size: 1.2rem; */
     position: sticky;
     top: 0;
     z-index: 999;

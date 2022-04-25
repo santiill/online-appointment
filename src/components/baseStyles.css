@@ -10,12 +10,12 @@
 }
 
 .label {
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 16px;
     font-weight: 700;
     line-height: 16px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 .input_cont {
     text-align: start;
@@ -34,4 +34,22 @@
     background: white;
     color: #04bbce;
     cursor: pointer;
+}
+
+.modal-header {
+    background: #00b8d6;
+    color: white;
+}
+
+.modal-content {
+   background-color: #f1fff8; 
+}
+
+.btn-primary:focus {
+    background-color: #04bbce;
+    border-color: #04bbce;
+    box-shadow: 0 0 0 0.25rem #04bbce;
+}
+.btn-primary:hover {
+    border-color: #04bbce;
 }

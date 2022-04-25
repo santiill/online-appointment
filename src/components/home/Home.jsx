@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import "./Home.css";
 import { Button } from "react-bootstrap";
 import Header from "../headers/Header";
+import Steppers from "../modal/fullModal/Stepper";
+import MyVerticallyCenteredModal from "../modal/fullModal/MainModal";
+import Calendar from "../modal/Calendar";
 // import Modal from "./modal/Modal";
 // import Modall from "./modal/Modal";
 // import { Header } from "../header/Header";
@@ -13,9 +16,12 @@ export const Home = () => {
   // const openModal = () => setModal(true)
   // const closeModal = () => setModal(false)
 
+  const [modalShow, setModalShow] = React.useState(false);
+
+
   return (
   <>
-    <div className="App">
+    <div id="main" className="App">
         {/* <Header/> */}
         <Header/>
         <header>
@@ -29,12 +35,12 @@ export const Home = () => {
           <div className='line'></div>
           
           <h3>Секономьте свое время!</h3>
-          <Button /* onClick={openModal}  */>Записаться к врачу</Button>
+          <Button onClick={() => setModalShow(true)}>Записаться к врачу</Button>
             
           </div>
         </header>
 
-        <section>
+        <section id="instruction">
 
             <div className='appointment'>
               <div className='line'></div>
@@ -73,7 +79,7 @@ export const Home = () => {
         </section>
 
         <footer>
-          <div className='container'>
+          <div id="contact" className='container'>
             <p>Телефон технической поддержки: 66-21-86</p>
             <p>introcez@mail.ru</p>
           </div>
@@ -94,6 +100,11 @@ export const Home = () => {
 
         </div> */}
       </div>
+      {/* <Steppers/> */}
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
       {/* {modal && <Modall/>} */}
   </>
     

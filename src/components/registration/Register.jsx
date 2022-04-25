@@ -4,6 +4,7 @@ import React from 'react'
 import { registration } from '../../redux/actions/auth_registration'
 import { request } from '../../redux/api'
 import "../baseStyles.css"
+import Header from '../headers/Header'
 import s from "./Register.module.css"
 
 const Register = () => {
@@ -23,9 +24,13 @@ const Register = () => {
     })
 
   return (
-    <div className={s.registration}>
+      <>
+       <Header/>
+       <div className={s.registration}>
+       
         <div className={s.registration_cont}>
-            <form onSubmit={formik.handleSubmit} className={s.form}>
+            
+            <form onSubmit={formik.handleSubmit} className={s.form}><h3>Зарегистрироваться</h3>
                 <div className='input_cont'>
                     <label className='label' htmlFor="">Имя</label>
                     <input name='firstName' onChange={formik.handleChange} className='input' type="text" placeholder='Введите имя'/>
@@ -55,6 +60,8 @@ const Register = () => {
         </div>
         
     </div>
+      </>
+    
   )
 }
 

@@ -185,3 +185,11 @@
     }
   }
   
+  @media screen and (max-width: 1000px) {
+    .reg button {
+      padding: 20px 40px;
+    }
+    .container p{
+      font-size: 16px;
+    }
+  }

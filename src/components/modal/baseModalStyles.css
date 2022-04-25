@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+.appoints {
+    padding: 20px;
+    background:#d4edda;
+}
+.experts {
+    overflow: auto;
+    height: 240px;
+    padding: 0px 15px 0px 0px;
+}
+.expert {
+    list-style-type: none;
+    padding: 10px 10px 10px 10px;
+    margin: 0;
+}
+.expert:hover {
+    background: #d6e2dc;
+    cursor: pointer;
+}
+
+.expert_name, .branch, .position, .hr {
+    margin: 0;
+}
+.expert_name {
+    font-weight: bold;
+}
+.position, .branch {
+    font-size: 14px;
+}
