@@ -39,7 +39,7 @@ const Header = () => {
     >
       <Navbar.Brand href="/">
         <img src={logo} />
-        <span className={s.invisible_text}>Home</span>
+        <span className={s.invisible_text}>hme</span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
