@@ -1,0 +1,32 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="670 275 125 114"><g data-item-type="text" data-item="Business" id="logo__item--business" class="logo__item">
+                <g class="logo__item__inner" transform="translate(733 386.56849872265116) scale(1 1) rotate(0 0 0)">
+                    <text data-part-id="logo__item--business" dy="0" dominant-baseline="auto" alignment-baseline="auto" font-family="Montserrat" font-size="32px" fill="#D7DD3F" letter-spacing="0" font-weight="bold" font-style="normal" data-font-family="Montserrat" data-font-weight="bold" data-font-style="normal" data-ttf-url="/builder_assets/fontsttf/font-montserrat-bold-normal.ttf"></text>
+                </g>
+            </g><g data-item-type="image" data-item="Image" data-logo-item="" id="logo__item--logo_0" class="logo__item">
+    <g class="logo__item__inner" transform="translate(662.2375850971214 261) scale(1.402999985727946 1.402999985727946) rotate(0 0 0)">
+        
+<g>
+	<radialGradient id="SVGID_1_" cx="47.1201" cy="45.1133" r="50.9376" gradientUnits="userSpaceOnUse">
+		<stop offset="0.1212" style="stop-color:#D7DD3F"></stop>
+		<stop offset="0.4545" style="stop-color:#9DC44D"></stop>
+		<stop offset="0.7455" style="stop-color:#51924B"></stop>
+		<stop offset="1" style="stop-color:#1E4324"></stop>
+	</radialGradient>
+	<path fill="#fbf7f7" d="M46.026,12.792c-21.188,0-38.355,17.172-38.355,38.354c0,6.391,1.559,12.417,4.323,17.714   c-0.704,0.961-1.395,1.96-2.086,3.021c0,0,9.602-9.613,25.863-10.744v16.299h20.911V62.361c5.365,0.157,11.913,0.057,16.211-0.999   c0,0-10.279-2.174-23.337-8.345c0,0-15.521-6.698-31.493,8.816c-0.138-0.258-0.264-0.51-0.364-0.742   c-1.093-3.109-1.684-6.459-1.684-9.946c0-16.576,13.422-30.01,30.011-30.01c15.104,0,27.621,11.185,29.707,25.73   c2.979,0.648,5.845,0.377,8.369-0.288C81.842,27.551,65.655,12.792,46.026,12.792z" data-part-id="logo__item--logo_0__0"></path>
+	<radialGradient id="SVGID_2_" cx="37.644" cy="58.0459" r="77.0893" gradientUnits="userSpaceOnUse">
+		<stop offset="0" style="stop-color:#00ABEB"></stop>
+		<stop offset="0.029" style="stop-color:#22AAE7"></stop>
+		<stop offset="0.0603" style="stop-color:#3FA8E3"></stop>
+		<stop offset="0.0914" style="stop-color:#53A8E0"></stop>
+		<stop offset="0.122" style="stop-color:#60A7DF"></stop>
+		<stop offset="0.1515" style="stop-color:#64A7DE"></stop>
+		<stop offset="0.3273" style="stop-color:#4674B7"></stop>
+		<stop offset="0.5212" style="stop-color:#333B8B"></stop>
+		<stop offset="0.7576" style="stop-color:#211C51"></stop>
+		<stop offset="1" style="stop-color:#171043"></stop>
+	</radialGradient>
+	<path fill="#fbf7f7" d="M93.202,43.713c0,0-10.406,8.702-21.037,3.625v-6.522H56.569V25.095H35.771v15.721h-15.96v14.264   c0,0,16.928-14.753,42.438-0.126c0,0,6.021,3.224,12.933,3.312c-0.429,1.767-1.006,3.476-1.747,5.103l0.012,0.238   c-0.05,0.014-0.088,0.02-0.126,0.031C68.57,73.979,58.14,81.155,46.026,81.155c-10.583,0-19.868-5.467-25.21-13.723   c-3.167,1.501-5.58,3.123-7.151,4.311C20.464,82.419,32.416,89.5,46.026,89.5c19.452,0,35.538-14.503,38.014-33.283   C87.773,54.174,91.104,50.366,93.202,43.713z" data-part-id="logo__item--logo_0__1"></path>
+</g>
+
+    </g>
+</g></svg>

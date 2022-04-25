@@ -26,6 +26,7 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import s from "./Header.module.css";
+import logo from "./logo.svg";
 
 const Header = () => {
   return (
@@ -36,7 +37,10 @@ const Header = () => {
       variant="dark"
       className={s.navbar}
     >
-      <Navbar.Brand href="/">Home</Navbar.Brand>
+      <Navbar.Brand href="/">
+        <img src={logo} />
+        <span className={s.invisible_text}>Home</span>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">

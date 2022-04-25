@@ -20,7 +20,7 @@
     }
   }
   header {
-    height: 1000px;
+    height: 960px;
     width: 100%;
     background: url("../../../public/1.jpg") no-repeat center center;
     background-size: cover;
@@ -65,7 +65,7 @@
   .reg {
     position: relative;
     z-index: 2;
-    margin-top: 300px;
+    margin-top: 240px;
     color: #fff;
   }
   .reg h1{
