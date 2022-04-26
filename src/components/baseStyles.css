@@ -4,18 +4,15 @@
     padding: 0 14px;
     border: 1px solid #DBDBDB;
     font-size: 14px;
-    background: #e8f0fe;
     outline: none;
-    border-radius: 3px;
+    border-radius: 8px;
 }
 
 .label {
-    margin: 10px 0;
+    margin-bottom: 5px;
     font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    color: #333;
-    margin-bottom: 2px;
+    font-weight: 400;
+    color: #253246;
 }
 .input_cont {
     text-align: start;
@@ -42,7 +39,7 @@
 }
 
 .modal-content {
-   background-color: #f1fff8; 
+   /* background-color: #f1fff8;  */
 }
 
 .btn-primary:focus {
@@ -53,3 +50,28 @@
 .btn-primary:hover {
     border-color: #04bbce;
 }
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+}
+
+@media screen and (max-width: 900px) {
+    .input {
+        height: 35px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+    .label {
+        font-size: 14px;
+    }
+    .button {
+        padding: 8px 0;
+        font-size: 14px;
+        color: #fff;
+        border: 1px solid #04bbce;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+  }

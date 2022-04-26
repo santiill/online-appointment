@@ -20,6 +20,9 @@
 .invisible_text{
     visibility: hidden;
 }
+.logo {
+    width: 100px;
+}
 .navbar {
     /* background: #696969;
     background: rgba(0,0,0,0.4); */
@@ -31,5 +34,18 @@
     position: sticky !important;
     top: 0;
     z-index: 999 !important;
-    
+    /* background: linear-gradient(90deg, rgb(86 146 161) 0%, rgba(116,156,168,1) 35%, rgba(116,156,168,1) 100%); */
 }
+
+  .back {
+    font-size: 30px;
+    transform: rotate(180deg);
+    width: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .invisb {
+        display: none;
+    }
+  }
+

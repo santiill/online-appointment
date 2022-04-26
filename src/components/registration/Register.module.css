@@ -3,20 +3,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 88vh;
 }
 
 .registration_cont {
-    width: 60%;
+    width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: 80vh;
-    border: 1px solid #04bbce;
+    /* border: 1px solid #04bbce; */
 }
 .form {
     width:  400px;
     display:flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
+.regist_cont {
+    display: flex;
+}
+.regist_title {
+    margin: 40px auto 0px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Gilroy,sans-serif;
+    line-height: 1.2;
+    letter-spacing: .01em;
+    color: #253246;
+    text-align: center;
+}
+.logo {
+    width: 100px;
+    color: green;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+.sample_img {
+    width: 600px;
+}
+@media screen and (max-width: 900px) {
+    .sample_img {
+        display: none;
+    }
+    .regist_title {
+        font-size: 30px;
+        margin: 30px auto 20px;
+    }
+    
+  }

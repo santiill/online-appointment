@@ -3,7 +3,9 @@ import React from "react";
 import { auth } from "../../redux/actions/auth_registration";
 import "../baseStyles.css";
 import Header from "../headers/Header";
+import RegistrationHeader from "../headers/RegistrationHeader";
 import s from "../registration/Register.module.css";
+import AuthHeader from "./AuthHeader";
 
 const Auth = () => {
   const formik = useFormik({
@@ -19,7 +21,8 @@ const Auth = () => {
 
   return (
     <>
-      <Header />
+      <AuthHeader />
+      <h3 className={s.regist_title}>Войти</h3>
       <div className={s.registration}>
         <div className={s.registration_cont}>
           <form onSubmit={formik.handleSubmit} className={s.form}>

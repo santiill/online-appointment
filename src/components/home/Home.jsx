@@ -23,11 +23,11 @@ export const Home = () => {
   <>
     <div id="main" className="App">
         {/* <Header/> */}
-        <Header/>
+        <Header color="dark"/>
         <header>
-          <div className='nav'>
+          {/* <div className='nav'>
             <div className='auth'></div>
-          </div>
+          </div> */}
           <div className='reg'> 
           <h1>
             Онлайн запись на прием к врачу
@@ -41,41 +41,52 @@ export const Home = () => {
         </header>
 
         <section id="instruction">
-
             <div className='appointment'>
               <div className='line'></div>
               <h1> Как записаться</h1>
               <p>на прием к врачу</p>
             </div>
-            <div className='var'> 
+            <div className="options">
+              <div className='var'> 
+                <img className="option_img" src="https://registratura.med.kg/packs/media/images/start_page/step-4-d390d8027f40d0494eb90af73299c46c.svg" alt=""/>
+                <div className='option'>
+                  <div className='num'>1</div>
+                  <p className="option_text">Регистрация полиса на сайте</p>
+                </div>
+              </div>
+              {/* <div className='var'> <img className="option_img_l" src="https://registratura.med.kg/packs/media/images/start_page/telephone-3df3b8ac49be8ef150727bec60f7ae87.png" alt=""/>
+                <div className='option'>
+                  <div className='num'>2</div>
+                  <p className="option_text">По домашнему телефону</p>
+                </div>
+              </div> */}
+              <div className='var'> 
+                <img className="option_img_l" src="https://registratura.med.kg/packs/media/images/start_page/smartphone-57612c82935bf7fcd57a31e219495bb4.png" alt=""/>
+                <div className='option'>
+                  <div className='num'>3</div>
+                  <p className="option_text">По мобильному телефону</p>
+                </div>
+              </div>
+              <div className='var'> 
+                <img className="option_img_l" src="https://registratura.med.kg/packs/media/images/start_page/front-desk-c6e517b81de45b71ef68da8e49f80df2.png" alt=""/>
+                <div className='option'>
+                  <div className='num'>4</div>
+                  <p className="option_text">Через регистратуру</p>
+                </div>
+              </div>
+              
+            </div>
 
-              <div>   </div>
-              <div className='option'>
-                <div className='num'>1</div>
-                <p>Регистрация полиса на сайте</p>
-              </div>
-            </div>
-            <div className='var'> 
-              <div className='option'>
-                <div className='num'>2</div>
-                <p>Регистрация полиса на сайте</p>
-              </div>
-              <div><img></img></div>
-            </div>
-            <div className='var'> 
-              <div><img></img></div>
-              <div className='option'>
-                <div className='num'>3</div>
-                <p>Регистрация полиса на сайте</p>
-              </div>
-            </div>
-            <div className='var'> 
-              <div className='option'>
-                <div className='num'>4</div>
-                <p>Регистрация полиса на сайте</p>
-              </div>
-              <div><img></img></div>
-            </div>
+        </section>
+        <section>
+          <div className="section_3">
+            <div className='line'></div>
+            <h2 className="steps_title">
+                ДЛЯ ЗАПИСИ НЕОБХОДИМО ВЫПОЛНИТЬ НЕСКОЛЬКО ПРОСТЫХ ШАГОВ:
+            </h2>
+          
+          </div>
+        
         </section>
 
         <footer>
