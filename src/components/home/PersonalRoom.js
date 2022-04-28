@@ -4,6 +4,7 @@ import { BiUserCircle, BiPencil, BiTime } from "react-icons/bi";
 import { RiMessage3Line } from "react-icons/ri";
 import { MdPersonOutline } from "react-icons/md";
 import { FiLogOut, FiCalendar } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const PersonalRoom = () => {
   const [showRoom, setShowRoom] = useState(false);
@@ -37,7 +38,9 @@ const PersonalRoom = () => {
         </div>
         <ul className="room_menu_items">
           <li className="room_menu__item">
-            <FiCalendar className="room_icon" /> Ближайщие записи
+            <Link className="link_router" to="/appointments">
+              <FiCalendar className="room_icon" /> Ближайщие записи
+            </Link>
           </li>
           <li className="room_menu__item">
             <BiPencil className="room_icon" /> Запись на прием

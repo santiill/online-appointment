@@ -52,3 +52,12 @@ li.room_menu__item:hover {background: #749ca8;color: #f1f2f2;/* padding: 20px 40
     background: #749ca8;
     color: #f1f2f2;
 }
+.room_menu__item .link_router {
+    margin: 0;
+    text-decoration: none;
+    color: #424a60;
+}
+
+.room_menu__item .link_router:hover {
+    color: #f1f2f2;
+}

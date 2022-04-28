@@ -74,14 +74,14 @@ export const Home = () => {
               <div className='var'> 
                 <img className="option_img_l" src="https://registratura.med.kg/packs/media/images/start_page/smartphone-57612c82935bf7fcd57a31e219495bb4.png" alt=""/>
                 <div className='option'>
-                  <div className='num'>3</div>
+                  <div className='num'>2</div>
                   <p className="option_text">По мобильному телефону</p>
                 </div>
               </div>
               <div className='var'> 
                 <img className="option_img_l" src="https://registratura.med.kg/packs/media/images/start_page/front-desk-c6e517b81de45b71ef68da8e49f80df2.png" alt=""/>
                 <div className='option'>
-                  <div className='num'>4</div>
+                  <div className='num'>3</div>
                   <p className="option_text">Через регистратуру</p>
                 </div>
               </div>

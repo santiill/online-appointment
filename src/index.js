@@ -7,6 +7,7 @@ import { applyMiddleware, compose, createStore } from "redux";
 import { appointment } from "./redux/reducers/appointment";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
+import Appoints from "./components/otherPages/Appoints";
 
 const store = createStore(appointment, compose(applyMiddleware(thunk)));
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -17,6 +18,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/*" element={<App />} />
+          <Route path="/appointments" element={<Appoints />} />
         </Routes>
       </BrowserRouter>
     </Provider>
