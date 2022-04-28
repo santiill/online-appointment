@@ -1,8 +1,6 @@
-// import s from "./Register.module.css";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import { useFormik } from "formik";
-import { auth, registration } from "../../redux/actions/auth_registration";
-import RegistrationHeader from "../headers/RegistrationHeader";
+import { auth } from "../../redux/actions/auth_registration";
 import AuthHeader from "./AuthHeader";
 import s from "../registration/Register.module.css";
 import auth_s from "./Auth.module.css";
@@ -15,7 +13,7 @@ function AuthModal({ setShow, show }) {
     },
     onSubmit: (data) => {
       console.log("data: ", data);
-      auth(data);
+      auth(data, setShow);
     },
   });
 
@@ -52,7 +50,11 @@ function AuthModal({ setShow, show }) {
                     placeholder="Введите пароль"
                   />
                 </div>
-                <button type="submit" className="button">
+                <button
+                  disabled={!(formik.values.username && formik.values.password)}
+                  type="submit"
+                  className="button"
+                >
                   Войти
                 </button>
               </form>

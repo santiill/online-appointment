@@ -1,0 +1,54 @@
+.room_menu {
+    background-color: #f1f2f2;
+    color: #424a60;
+  width: 270px;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 850ms;
+}
+.room .active {
+    right: 0;
+  transition: 500ms;
+}
+.room_menu__item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 20px;
+    list-style: none;
+    height: 60px;
+    /* margin-bottom: 10px; */
+}
+.room_open_icon {
+    cursor: pointer;
+    font-size: 35px;
+}
+.room_cancel {
+    cursor: pointer;
+    font-size: 50px;
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    list-style: none;
+    text-align: start;
+}
+.room_icon {font-size: 25px;margin-right: 10px;}
+
+li.room_menu__item:hover {background: #749ca8;color: #f1f2f2;/* padding: 20px 40px; */
+    border-radius: 4px;
+    color: white;
+    /* padding: 8px 40px; */
+}
+.room_menu_items {
+    padding: 20px 5px;
+}
+.user {
+    display: flex;
+    align-items: center;
+    padding: 25px 20px 29px 25px;
+    background: #749ca8;
+    color: #f1f2f2;
+}

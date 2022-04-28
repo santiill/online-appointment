@@ -6,20 +6,24 @@ import RegistrationHeader from "../headers/RegistrationHeader";
 import AuthModal from "../auth/AuthModal";
 import { useState } from "react";
 
-function RegistModal({ setShow, show }) {
+function RegistModal({ setShow, show, setShowAuth }) {
   const formik = useFormik({
     initialValues: {
       firstName: "",
       lastName: "",
       middleName: "",
       username: "",
-      password: "",
+      dateOfBirth: "",
+      address: "",
+      city: "",
+      email: "",
     },
     onSubmit: (data) => {
       console.log("data: ", data);
-      registration(data);
+      registration(data, setShowAuth);
     },
   });
+  localStorage.getItem("token") && setShow(false);
 
   return (
     <>
@@ -64,6 +68,53 @@ function RegistModal({ setShow, show }) {
                     className="input"
                     type="text"
                     placeholder="Введите отчество"
+                  />
+                </div>
+                {/* <div className="input_cont">
+                  <label className="label" htmlFor="">
+                    Дата рождения
+                  </label>
+                  <input
+                    name="dateOfBirth"
+                    onChange={formik.handleChange}
+                    className="input"
+                    type="date"
+                  />
+                </div> */}
+                <div className="input_cont">
+                  <label className="label" htmlFor="">
+                    Адрес
+                  </label>
+                  <input
+                    name="address"
+                    onChange={formik.handleChange}
+                    className="input"
+                    type="text"
+                    placeholder="Введите адрес"
+                  />
+                </div>
+                <div className="input_cont">
+                  <label className="label" htmlFor="">
+                    Город
+                  </label>
+                  <input
+                    name="city"
+                    onChange={formik.handleChange}
+                    className="input"
+                    type="text"
+                    placeholder="Введите город"
+                  />
+                </div>
+                <div className="input_cont">
+                  <label className="label" htmlFor="">
+                    Почта
+                  </label>
+                  <input
+                    name="email"
+                    onChange={formik.handleChange}
+                    className="input"
+                    type="text"
+                    placeholder="Введите почту"
                   />
                 </div>
                 <div className="input_cont">

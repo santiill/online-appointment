@@ -84,7 +84,14 @@ export const Home = () => {
             <h2 className="steps_title">
                 ДЛЯ ЗАПИСИ НЕОБХОДИМО ВЫПОЛНИТЬ НЕСКОЛЬКО ПРОСТЫХ ШАГОВ:
             </h2>
-          
+              <div>
+                <ul>
+                  <li>Шаг 1.</li>
+                  <li>- Войти на портал registratura.med.kg</li>
+                  <li>- Ввести ПИН</li>
+                  <li>- Ввести номер телефона</li>
+                </ul>
+              </div>
           </div>
         
         </section>

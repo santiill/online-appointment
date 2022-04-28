@@ -27,19 +27,19 @@
     border-radius: 50px;
     margin-top: 30px;
 }
-.button:hover {
+.button:disabled {
+    background-color: lightgray;
+    border: #253246;
+}
+/* .button:hover {
     background: white;
     color: #04bbce;
     cursor: pointer;
-}
+} */
 
 .modal-header {
     background: #00b8d6;
     color: white;
-}
-
-.modal-content {
-   /* background-color: #f1fff8;  */
 }
 
 .btn-primary:focus {
@@ -55,6 +55,10 @@
     justify-content: space-between;
     padding: 10px 20px;
 
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(241 242 242);
 }
 
 @media screen and (max-width: 900px) {

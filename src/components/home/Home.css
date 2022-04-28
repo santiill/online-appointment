@@ -159,19 +159,24 @@
     
   }
   footer {
-    background-color: #04bbce;
+    background-color: #525252;
   }
   .container {
     display: flex;
-    width: 40%;
+    width: 80%;
     margin: 0 auto;
     justify-content: space-between;
-    padding: 50px 0;
+    align-items: baseline;
+    background: #414141;
+    border: 1px solid #749ca8;
   
   }
   .container p{
-    font-size: 26px;
+    font-size: 1rem;
     color: #fff;
+    font-family: sans-serif;
+    width: 50%;
+    padding: 30px 10px;
   }
 
   .options {
@@ -195,7 +200,7 @@
   line-height: 40px;
   margin-top: 20px;
 }
-  
+
   
   @keyframes App-logo-spin {
     from {
