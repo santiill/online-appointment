@@ -13,7 +13,7 @@
 }
 .expert {
     list-style-type: none;
-    padding: 10px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
     margin: 0;
 }
 .expert:hover {
@@ -29,4 +29,11 @@
 }
 .position, .branch {
     font-size: 14px;
+}
+
+.doctor_active {
+    background: lightgrey;
+}
+.react-calendar {
+    margin: auto;
 }

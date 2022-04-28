@@ -198,8 +198,12 @@ import React, { useState } from "react";
 import "@mobiscroll/react/dist/css/mobiscroll.min.css";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { Button } from "react-bootstrap";
+import { useFormik } from "formik";
+import { request } from "../../redux/api";
+import { useSelector } from "react-redux";
 
-const Calendarr = () => {
+const Calendarr = ({ next }) => {
   //   const myLabels = React.useMemo(() => {
   //     return [
   //       {
@@ -230,12 +234,36 @@ const Calendarr = () => {
   //       },
   //     ];
   //   }, []);
+
   const [value, onChange] = useState(new Date());
+  console.log(value);
+  const state = useSelector((state) => state);
+  console.log(state);
+  const data = {
+    policy: state.policy,
+    phone: state.number,
+    doctorId: state.doctor,
+    time: value,
+  };
+
+  const submitAppointment = () => {
+    console.log(data);
+    request
+      .doAppointmentApi(data)
+      .then((res) => {
+        console.log("succes: TRUE");
+        next();
+      })
+      .catch((err) => console.log("error: ", err.message));
+  };
 
   return (
     <div>
       <h3>Выберите удобную вам дату и время</h3>
       <Calendar className="mt-5" onChange={onChange} value={value} />
+      <Button onClick={submitAppointment} className="float-lg-end">
+        Продолжить
+      </Button>
     </div>
   );
 };

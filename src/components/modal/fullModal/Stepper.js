@@ -9,17 +9,17 @@ import { Form } from "react-bootstrap";
 import Personalization from "../Personalization";
 import Experts from "../Experts";
 import Calendarr from "../Calendar";
+import Appointments from "../Appointments";
 
-const steps = ["Ваши данные", "Выберите специалиста", "Выбор даты"];
+const steps = [
+  "Ваши данные",
+  "Ваши записи",
+  "Выберите специалиста",
+  "Выбор даты",
+];
 
 export default function Steppers() {
   const [activeStep, setActiveStep] = React.useState(0);
-
-  const stepContentMap = {
-    1: <Personalization />,
-    2: <Experts />,
-    3: <Calendarr />,
-  };
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -34,6 +34,13 @@ export default function Steppers() {
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     // setSkipped(newSkipped);
+  };
+
+  const stepContentMap = {
+    1: <Personalization next={handleNext} />,
+    2: <Appointments next={handleNext} />,
+    3: <Experts next={handleNext} />,
+    4: <Calendarr next={handleNext} />,
   };
 
   const handleBack = () => {
@@ -74,13 +81,9 @@ export default function Steppers() {
       </Stepper>
       {activeStep === steps.length ? (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>
-            All steps completed - you&apos;re finished
+          <Typography sx={{ mt: 4, mb: 3 }}>
+            <h5>Вы успешно записались на прием к врачу!</h5>
           </Typography>
-          <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-            <Box sx={{ flex: "1 1 auto" }} />
-            <Button onClick={handleReset}>Reset</Button>
-          </Box>
         </React.Fragment>
       ) : (
         <React.Fragment>
@@ -97,9 +100,9 @@ export default function Steppers() {
               Back
             </Button> */}
             <Box sx={{ flex: "1 1 auto" }} />
-            <Button onClick={handleNext}>
+            {/* <Button onClick={handleNext}>
               {activeStep === steps.length - 1 ? "Finish" : "Продолжить"}
-            </Button>
+            </Button> */}
           </Box>
         </React.Fragment>
       )}

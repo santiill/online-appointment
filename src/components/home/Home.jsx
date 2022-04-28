@@ -1,10 +1,13 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Home.css";
 import { Button } from "react-bootstrap";
 import Header from "../headers/Header";
 import Steppers from "../modal/fullModal/Stepper";
 import MyVerticallyCenteredModal from "../modal/fullModal/MainModal";
 import Calendar from "../modal/Calendar";
+import { request } from "../../redux/api";
+import { useDispatch, useSelector } from "react-redux";
+import { getListOfDoctors } from "../../redux/actions/appointmentCreator";
 // import Modal from "./modal/Modal";
 // import Modall from "./modal/Modal";
 // import { Header } from "../header/Header";
@@ -17,6 +20,14 @@ export const Home = () => {
   // const closeModal = () => setModal(false)
 
   const [modalShow, setModalShow] = React.useState(false);
+
+  const dispatch = useDispatch();
+  const doctors_state = useSelector(state => state.doctors)
+  console.log("doctors_state: ", doctors_state)
+
+  useEffect(() => {
+    dispatch(getListOfDoctors())
+  }, [])
 
 
   return (
@@ -78,7 +89,7 @@ export const Home = () => {
             </div>
 
         </section>
-        <section>
+        {/* <section>
           <div className="section_3">
             <div className='line'></div>
             <h2 className="steps_title">
@@ -94,7 +105,7 @@ export const Home = () => {
               </div>
           </div>
         
-        </section>
+        </section> */}
 
         <footer>
           <div id="contact" className='container'>

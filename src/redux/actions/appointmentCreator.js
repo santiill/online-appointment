@@ -1,0 +1,41 @@
+import { Next } from "react-bootstrap/esm/PageItem";
+import {
+  CHOOSE_DOCTOR,
+  GET_ALL_APPOINTMENTS,
+  GET_DOCTORS_LIST,
+} from "../actionTypes";
+import { request } from "../api";
+
+export const getListOfDoctors = () => (dispatch) => {
+  request.getDoctorsList().then((res) => {
+    console.log("doctors_list: ", res.data.content);
+    dispatch({ type: GET_DOCTORS_LIST, payload: res.data.content });
+  });
+};
+
+export const doAppointment = (data) => {
+  request.doAppointmentApi(data).then((res) => {
+    if (res.status == 200) {
+      console.log("successfully_did_appointment");
+    } else {
+      console.log("error: ", res.error.message);
+    }
+  });
+};
+
+export const getAllAppointments = (data, next) => (dispatch) => {
+  request.getAllAppointmentsApi(data.policy).then((res) => {
+    console.log("all_appointments: ", res);
+    dispatch({
+      type: GET_ALL_APPOINTMENTS,
+      appointments: res.data.content,
+      data: data,
+    });
+    next();
+  });
+};
+
+export const chooseADoctor = (doctor) => (dispatch) => {
+  console.log("dddd: ", doctor);
+  dispatch({ type: CHOOSE_DOCTOR, doctor: doctor });
+};

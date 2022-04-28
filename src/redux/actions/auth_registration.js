@@ -11,7 +11,11 @@ export const auth = async (data, setShow) => {
 
 export const registration = async (data, setShowAuth) => {
   const res = await request.register(data);
-  swal("", "Вы успешно прошли регистрацию!", "success");
+  swal(
+    "Вы успешно прошли регистрацию!",
+    "Полис отправлен на вашу эл.почту.",
+    "success"
+  );
   setShowAuth(true);
   console.log("res_data: ", res.data);
 };
