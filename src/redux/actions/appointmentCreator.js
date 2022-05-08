@@ -31,7 +31,7 @@ export const getAllAppointments = (data, next) => (dispatch) => {
       appointments: res.data.content,
       data: data,
     });
-    next();
+    next && next();
   });
 };
 

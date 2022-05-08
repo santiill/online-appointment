@@ -60,6 +60,9 @@
 .navbar-dark .navbar-nav .nav-link {
     color: rgb(241 242 242);
 }
+.error {
+    color: red;
+}
 
 @media screen and (max-width: 900px) {
     .input {
@@ -77,5 +80,12 @@
         border: 1px solid #04bbce;
         border-radius: 8px;
         margin-top: 15px;
+    }
+    .css-qivjh0-MuiStepLabel-label {
+        font-size: 0.775rem;
+    }
+    .css-1bw0nnu-MuiStep-root {
+        padding-left: 5px;
+        padding-right: 5px;
     }
   }

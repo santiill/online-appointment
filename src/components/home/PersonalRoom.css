@@ -37,10 +37,17 @@
 }
 .room_icon {font-size: 25px;margin-right: 10px;}
 
-li.room_menu__item:hover {background: #749ca8;color: #f1f2f2;/* padding: 20px 40px; */
+.room_menu__item:hover {background: #749ca8;color: #f1f2f2;/* padding: 20px 40px; */
     border-radius: 4px;
     color: white;
     /* padding: 8px 40px; */
+}
+a.activeL {
+    background: #749ca8;
+    color: #f1f2f2; 
+    border-radius: 4px;
+    color: white;
+    margin: 0;
 }
 .room_menu_items {
     padding: 20px 5px;
@@ -52,7 +59,7 @@ li.room_menu__item:hover {background: #749ca8;color: #f1f2f2;/* padding: 20px 40
     background: #749ca8;
     color: #f1f2f2;
 }
-.room_menu__item .link_router {
+.room_menu__item, a.link_router {
     margin: 0;
     text-decoration: none;
     color: #424a60;

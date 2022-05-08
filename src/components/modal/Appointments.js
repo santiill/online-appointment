@@ -23,7 +23,7 @@ const Appointments = ({ next }) => {
       </div>
       <br />
       <Button onClick={next} className="float-lg-end">
-        Продолжить
+        Записаться
       </Button>
     </>
   );

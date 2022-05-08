@@ -13,19 +13,13 @@ const Experts = ({ next }) => {
   const dispatch = useDispatch();
 
   const submit = () => {
-    console.log("doctor: ", choosenDoctor);
-    dispatch(chooseADoctor(choosenDoctor));
-    next();
+    if (choosenDoctor) {
+      console.log("doctor: ", choosenDoctor);
+      dispatch(chooseADoctor(choosenDoctor));
+      next();
+    }
   };
-  // const formik = useFormik({
-  //   initialValues: {
-  //     doctor: choosenDoctor,
-  //   },
-  //   onSubmit: (data) => {
-  //     console.log("doctor: ", data);
-  //     dispatch(chooseADoctor(data.doctor));
-  //   },
-  // });
+
   const doctors = useSelector((state) => state.doctors);
   return (
     <div>
