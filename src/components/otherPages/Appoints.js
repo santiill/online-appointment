@@ -1,11 +1,51 @@
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { getAllAppointments } from "../../redux/actions/appointmentCreator";
-import { request } from "../../redux/api";
-import Header from "../headers/Header";
+import "../baseStyles.css";
 import "./otherPages.css";
+import { styled } from "@mui/material/styles";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllAppointments } from "../../redux/actions/appointmentCreator";
+import Header from "../headers/Header";
 
-const Appoints = () => {
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  "&:last-child td, &:last-child th": {
+    border: 0,
+  },
+}));
+
+function createData(name, calories, fat, carbs, protein) {
+  return { name, calories, fat, carbs, protein };
+}
+
+const rows = [
+  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
+  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
+  createData("Eclair", 262, 16.0, 24, 6.0),
+  createData("Cupcake", 305, 3.7, 67, 4.3),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
+];
+
+export default function Appointments() {
   const state = useSelector((state) => state.appointments);
   const user = JSON.parse(localStorage.getItem("user"));
   const dispatch = useDispatch();
@@ -20,22 +60,44 @@ const Appoints = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Header />
-      <div className="appoint_container">
-        <ul className="appoint_list">
-          {state.map((item) => {
-            return (
-              <li key={item.id} className="appoint_item">
-                {item.attendingDoctor.firstName} {item.attendingDoctor.lastName}{" "}
-                {item.attendingDoctor.middleName}
-              </li>
-            );
-          })}
-        </ul>
+      <div className="table_cont">
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>ФИО</StyledTableCell>
+                <StyledTableCell /* align="right" */>
+                  Специалист
+                </StyledTableCell>
+                <StyledTableCell /* align="right" */>Время</StyledTableCell>
+                {/* <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
+            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell> */}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {state.map((item) => (
+                <StyledTableRow key={item.id}>
+                  <StyledTableCell component="th" scope="row">
+                    {item.attendingDoctor.firstName}
+                    {item.attendingDoctor.lastName}
+                    {item.attendingDoctor.middleName}
+                  </StyledTableCell>
+                  <StyledTableCell /* align="right" */>
+                    {item.attendingDoctor.speciality}
+                  </StyledTableCell>
+                  <StyledTableCell /* align="right" */>
+                    {/* {item.time} */} 21:59
+                  </StyledTableCell>
+                  {/* <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+              <StyledTableCell align="right">{row.protein}</StyledTableCell> */}
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </div>
-    </div>
+    </>
   );
-};
-
-export default Appoints;
+}

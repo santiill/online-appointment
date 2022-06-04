@@ -1,3 +1,13 @@
 .appoint_container {width: 100%;display: flex;}
 
 ul.appoint_list {margin: auto;padding: 50px;list-style: none;display: flex;flex-direction: column;gap: 20px;font-size: 20px;font-family: sans-serif;}
+.row {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.css-1wvnaxz-MuiTableCell-root.MuiTableCell-head, .css-1nslmh4-MuiTableCell-root.MuiTableCell-head  {
+    background-color: #749ca8 !important;
+    color: #fff;
+}
+.table_cont {width: 80%;margin: auto;margin-top: 40px;}

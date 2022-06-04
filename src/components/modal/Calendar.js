@@ -236,14 +236,14 @@ const Calendarr = ({ next }) => {
   //   }, []);
 
   const [value, onChange] = useState(new Date());
-  console.log(value);
+  console.log(value.toISOString());
   const state = useSelector((state) => state);
   console.log(state);
   const data = {
     policy: state.policy,
     phone: state.number,
     doctorId: state.doctor,
-    time: value,
+    time: value.toISOString(),
   };
 
   const submitAppointment = () => {

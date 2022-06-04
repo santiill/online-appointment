@@ -13,9 +13,9 @@ const API = axios.create({
 
 export const request = {
   register: (data) => API.post("api/user/registration", data),
-  login: (data) => API.post("api/auth", data),
+  login: (data) => API.post("consumer/api/auth", data),
   getDoctorsList: () => API.get("doctor"),
-  doAppointmentApi: (data) => API.post("appointment", data),
-  getAllAppointmentsApi: (data) => API.get(`appointment/${data}`),
-  doAppointmentsApi: (data) => API.post("appointment", data),
+  doAppointmentApi: (data) => API.post("appointment/api", data),
+  getAllAppointmentsApi: (data) => API.get(`appointment/api/policy/${data}`),
+  // doAppointmentsApi: (data) => API.post("appointment", data),
 };
