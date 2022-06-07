@@ -80,9 +80,7 @@ export default function Appointments() {
               {state.map((item) => (
                 <StyledTableRow key={item.id}>
                   <StyledTableCell component="th" scope="row">
-                    {item.attendingDoctor.firstName}
-                    {item.attendingDoctor.lastName}
-                    {item.attendingDoctor.middleName}
+                    {item.attendingDoctor.firstName} {item.attendingDoctor.lastName} {item.attendingDoctor.middleName}
                   </StyledTableCell>
                   <StyledTableCell /* align="right" */>
                     {item.attendingDoctor.speciality}

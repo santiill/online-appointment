@@ -63,6 +63,24 @@
 .error {
     color: red;
 }
+.cs-message__content {
+    color: white !important;
+    /* background: #6ea9d7 !important; */
+}
+.cs-message--incoming .cs-message__content {
+    background-color: #8fb1b9 !important;
+}
+.cs-message--outgoing .cs-message__content {
+
+    background-color: #749ca8 !important;
+}
+.cs-message-input__content-editor-wrapper, .cs-message-input__content-editor, .cs-main-container>.cs-sidebar.cs-sidebar--left .cs-search, .cs-search__input {
+    background-color: #92bfcd !important;
+    color: #fff !important;
+}
+svg:not(:root).svg-inline--fa {
+    color: #92bfcd !important;
+}
 
 @media screen and (max-width: 900px) {
     .input {
@@ -87,5 +105,8 @@
     .css-1bw0nnu-MuiStep-root {
         padding-left: 5px;
         padding-right: 5px;
+    }
+    .navbar-dark .navbar-toggler {
+        display: none;
     }
   }

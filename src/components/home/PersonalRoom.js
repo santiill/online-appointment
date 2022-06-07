@@ -5,6 +5,7 @@ import { RiMessage3Line } from "react-icons/ri";
 import { MdPersonOutline } from "react-icons/md";
 import { FiLogOut, FiCalendar } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
+import Header from "../headers/Header";
 
 const PersonalRoom = () => {
   const [showRoom, setShowRoom] = useState(false);
@@ -67,6 +68,14 @@ const PersonalRoom = () => {
           >
             <li className="room_menu__item">
               <RiMessage3Line className="room_icon" /> Отзывы
+            </li>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "activeL" : "link_router")}
+            to="/chat"
+          >
+            <li className="room_menu__item">
+              <RiMessage3Line className="room_icon" /> Чат
             </li>
           </NavLink>
           <hr />
