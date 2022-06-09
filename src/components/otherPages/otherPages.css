@@ -11,3 +11,25 @@ ul.appoint_list {margin: auto;padding: 50px;list-style: none;display: flex;flex-
     color: #fff;
 }
 .table_cont {width: 80%;margin: auto;margin-top: 40px;}
+
+.card {
+    width: 200px;
+    border: 1px solid #1d252b;
+    padding: 10px;
+}   
+.card_cont {
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+.card_text {
+    font-weight: bold;
+    color: #1d252b;
+    margin-top: 10px;
+}
+.card_text_grey {
+    color: grey;
+}

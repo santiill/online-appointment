@@ -64,7 +64,7 @@ const PersonalRoom = () => {
           </NavLink>
           <NavLink
             className={({ isActive }) => (isActive ? "activeL" : "link_router")}
-            to="/comment"
+            to="/review"
           >
             <li className="room_menu__item">
               <RiMessage3Line className="room_icon" /> Отзывы
