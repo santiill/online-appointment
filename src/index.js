@@ -10,8 +10,9 @@ import { Provider } from "react-redux";
 import Appoints from "./components/otherPages/Appoints";
 // import CustomizedTables from "./components/otherPages/Table";
 import Appointments from "./components/otherPages/Appoints";
-import Chats from "./components/otherPages/Chats";
 import Review from "./components/otherPages/Review";
+import Chat from "./components/otherPages/chat/Chat";
+import Chat2 from "./components/otherPages/chat/Chat";
 
 const store = createStore(appointment, compose(applyMiddleware(thunk)));
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -24,7 +25,7 @@ root.render(
           <Route path="/*" element={<App />} />
           <Route path="/appointments" element={<Appointments />} />
           <Route path="/review" element={<Review />} />
-          <Route path="/chat" element={<Chats />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </BrowserRouter>
     </Provider>
