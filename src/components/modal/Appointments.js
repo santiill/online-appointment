@@ -3,14 +3,14 @@ import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 
 const Appointments = ({ next }) => {
-  const state = useSelector((state) => state.appointments);
-  console.log("app: ", state);
+  const states = useSelector((state) => state.appointments);
+  console.log("app: ", states);
   return (
     <>
       <div className="mt-4 appoints">
         <h5 className="text-center">Записи</h5>
         <ol>
-          {state.map((item) => {
+          {states.map((item) => {
             const t = item.attendingDoctor;
             return (
               <li key={item.id}>

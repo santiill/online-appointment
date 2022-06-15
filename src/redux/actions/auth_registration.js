@@ -10,7 +10,8 @@ export const auth = async (data, setShow) => {
 };
 
 export const registration = async (data, setShowAuth) => {
-  const res = await request.register(data);
+  console.log("d: ", data)
+  const res = await request.register(data)
   swal(
     "Вы успешно прошли регистрацию!",
     "Полис отправлен на вашу эл.почту.",

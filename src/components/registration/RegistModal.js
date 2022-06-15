@@ -5,22 +5,51 @@ import { registration } from "../../redux/actions/auth_registration";
 import RegistrationHeader from "../headers/RegistrationHeader";
 import AuthModal from "../auth/AuthModal";
 import { useState } from "react";
+import { MdAddAPhoto } from "react-icons/md";
+import {request} from "../../redux/api";
 
 function RegistModal({ setShow, show, setShowAuth }) {
+
+  const [img, setImg] = useState();
+  const [imgURL, setImgURL] = useState();
+  const selectedImg = (e) => {
+    setImg(e.target.files[0]);
+    if (e.target.files && e.target.files[0]) {
+      setImgURL(URL.createObjectURL(e.target.files[0]));
+    }
+    console.log(e.target.files[0].name);
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
       lastName: "",
       middleName: "",
       username: "",
+      password: "",
       dateOfBirth: "",
       address: "",
       city: "",
       email: "",
+      gender: "",
+      avatar: img,
     },
     onSubmit: (data) => {
       console.log("data: ", data);
-      registration(data, setShowAuth);
+      const formData = new FormData()
+      formData.append("firstName", data.firstName)
+      formData.append("lastName", data.lastName)
+      formData.append("middleName", data.middleName)
+      formData.append("dateOfBirth", data.dateOfBirth)
+      formData.append("address", data.address)
+      formData.append("city", data.city)
+      formData.append("email", data.email)
+      formData.append("username", data.username)
+      formData.append("password", data.password)
+      formData.append("gender", data.gender)
+      formData.append("avatar", img, img.name)
+
+      registration(formData, setShowAuth)
     },
   });
   localStorage.getItem("token") && setShow(false);
@@ -34,6 +63,20 @@ function RegistModal({ setShow, show, setShowAuth }) {
           <div className={s.registration}>
             <div className={s.registration_cont}>
               <form onSubmit={formik.handleSubmit} className={s.form}>
+                <label htmlFor="image" className={s.image_label}>
+                  <div className={s.icon_cont}>
+                    <MdAddAPhoto className={s.img_icon} />
+                  </div>
+                  <img className={s.image} src={imgURL} alt="" />
+                </label>
+                <input
+                    onChange={(e) => selectedImg(e)}
+                    type="file"
+                    name="image"
+                    id="image"
+                    value={formik.values.фото}
+                    className={s.img_file}
+                />
                 <div className="input_cont">
                   <label className="label" htmlFor="">
                     Имя
@@ -70,7 +113,7 @@ function RegistModal({ setShow, show, setShowAuth }) {
                     placeholder="Введите отчество"
                   />
                 </div>
-                {/* <div className="input_cont">
+                <div className="input_cont">
                   <label className="label" htmlFor="">
                     Дата рождения
                   </label>
@@ -80,7 +123,25 @@ function RegistModal({ setShow, show, setShowAuth }) {
                     className="input"
                     type="date"
                   />
-                </div> */}
+                </div>
+                <div className="input_cont">
+                  <label className="label" htmlFor="">
+                    Пол
+                  </label>
+                <select
+                    onChange={(e) => formik.handleChange(e)}
+                    className="input"
+                    /* value={formik.values.должность} */
+                    name="gender"
+                >
+                  <option className={s.option} value="MAN">
+                    Мужской
+                  </option>
+                  <option className={s.option} value="WOMAN">
+                    Женский
+                  </option>
+                </select>
+                </div>
                 <div className="input_cont">
                   <label className="label" htmlFor="">
                     Адрес

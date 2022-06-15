@@ -1,4 +1,5 @@
 import {
+  CHECK_HOURS,
   CHOOSE_DOCTOR,
   GET_ALL_APPOINTMENTS,
   GET_DOCTORS_LIST,
@@ -7,6 +8,7 @@ import {
 const initialState = {
   doctors: [],
   appointments: [],
+  hours: [],
   policy: "",
   number: "",
   doctor: "",
@@ -25,6 +27,8 @@ export const appointment = (state = initialState, action) => {
       };
     case CHOOSE_DOCTOR:
       return { ...state, doctor: action.doctor };
+    case CHECK_HOURS:
+      return {...state, hours: action.hours}
     default:
       return state;
   }

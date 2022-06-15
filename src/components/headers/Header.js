@@ -4,7 +4,8 @@ import AuthModal from "../auth/AuthModal";
 import PersonalRoom from "../home/PersonalRoom";
 import RegistModal from "../registration/RegistModal";
 import s from "./Header.module.css";
-import logo from "./logo.svg";
+import logos from "./logo.svg";
+import {header_logo} from "../images";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -23,15 +24,15 @@ const Header = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        bg="dark"
-        variant="dark"
+        bg="light"
+        variant="light"
         className={s.navbar}
       >
         <Nav className={s.invisb}>
           <Nav.Link href="#main"></Nav.Link>
         </Nav>
         <Navbar.Brand href="/">
-          <img className={s.logo} src={logo} />
+          <img className={s.logo} src={header_logo} />
           <span className={s.invisible_text}>hme</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

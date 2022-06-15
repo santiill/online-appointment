@@ -1,5 +1,6 @@
 import { Next } from "react-bootstrap/esm/PageItem";
 import {
+  CHECK_HOURS,
   CHOOSE_DOCTOR,
   GET_ALL_APPOINTMENTS,
   GET_DOCTORS_LIST,
@@ -39,3 +40,10 @@ export const chooseADoctor = (doctor) => (dispatch) => {
   console.log("dddd: ", doctor);
   dispatch({ type: CHOOSE_DOCTOR, doctor: doctor });
 };
+
+export const checkHours = (value, doctorId) => (dispatch) => {
+  request.checkHoursApi(value, doctorId).then(res => {
+    console.log("dddd: ", res);
+    dispatch({type: CHECK_HOURS, hours: res.data})
+  })
+}

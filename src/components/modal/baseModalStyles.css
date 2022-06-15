@@ -34,6 +34,45 @@
 .doctor_active {
     background: lightgrey;
 }
-.react-calendar {
-    margin: auto;
+.calendar_cont {
+    display: flex;
+    justify-content: space-between;
+    margin: 47px 0;
+    width: 100%;
+}
+.hour_list {
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.hour {
+    width: 100px;
+    height: 40px;
+    border: 1px solid lightgray;
+}
+.blue_hour {
+    width: 100px;
+    height: 40px;
+    border: 1px solid lightgray;
+    background: #4f6ebd;
+    color: whitesmoke;
+}
+.hour:hover {
+    background: lightblue;
+}
+span.blue_box {
+    padding: 0px 10px;
+    background: blue;
+}
+
+span.gray_box {
+    padding: 0px 10px;
+    background: #b4b3b3;
+}
+
+.hour_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
