@@ -31,11 +31,15 @@ const PersonalRoom = () => {
           <li onClick={closeMenuBar} className="room_cancel">
             &#x2039;
           </li>
-          <MdPersonOutline className="room_icon" />
-          <span>
-            {user.firstName} {user.lastName}
-            {/* <br /> Алшановна */}
-          </span>
+          {/*<MdPersonOutline className="room_icon" />*/}
+          <div className="user_name_cont">
+            <p style={{marginBottom:1}}>
+              {user.firstName} {user.lastName}
+              {/*<br /> */}
+            </p>
+            <p className="policy_p">Ваш полис: {user.medicalCard.policy}</p>
+          </div>
+
         </div>
         <ul className="room_menu_items">
           <NavLink
