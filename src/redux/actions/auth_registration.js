@@ -9,7 +9,7 @@ export const auth = async (data, setShow) => {
   localStorage.setItem("user", JSON.stringify(res.data.consumer));
 };
 
-export const registration = async (data, setShowAuth) => {
+export const registration = async (data, setShowAuth, navigate) => {
   console.log("d: ", data)
   const res = await request.register(data)
   swal(
@@ -18,5 +18,6 @@ export const registration = async (data, setShowAuth) => {
     "success"
   );
   setShowAuth(true);
+  navigate("/*")
   console.log("res_data: ", res.data);
 };

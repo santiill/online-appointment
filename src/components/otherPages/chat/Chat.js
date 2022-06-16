@@ -1,10 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Chat.module.css"
 import { RiSendPlaneFill } from 'react-icons/ri';
 import s from "./Chat.module.css"
 import Header from "../../headers/Header";
 
 const Chat2 = () => {
+    const chatArr = [
+        "hdbfjshbfdksfnskfb",
+        "Youuuuuu",
+        "Heeeeeeey",
+    ]
+    const [textArr, setTextArr] = useState([])
+    const [inputValue, setInputValue] = useState("");
+    const [value, setValue] = useState(" ");
+    const [reset, setReset] = useState(false);
+
+
+    const sendMessage = () => {
+        setValue(inputValue)
+    }
+
+    useEffect(() => {
+        setTextArr([...textArr, value])
+        console.log(textArr)
+        console.log(value)
+    }, [value])
+
     return (
         <>
             <Header/>
@@ -97,11 +118,18 @@ const Chat2 = () => {
                                 <p className={s.text}> 9 pm at the bar if possible 😳</p>
                             </div>
                             <p className={s.time}> 15h09</p>
+                            {textArr.map(text => {
+                                return <div className={`${s.message} ${s.text_only}`}>
+                                        <div className={s.response}>
+                                            <p className={s.text}> {text}</p>
+                                        </div>
+                                    </div>
+                            })}
                         </div>
                         <div className={s.footer_chat}>
                             {/*<i className="icon fa fa-smile-o clickable" style="font-size:25pt;" aria-hidden="true"></i>*/}
-                            <input type="text" className={s.write_message} placeholder="Type your message here"></input>
-                            <RiSendPlaneFill className={`${s.icon} ${s.send} ${s.clickable}`}/>
+                            <input onChange={(e) => setInputValue(e.target.value)} type="text" className={s.write_message} placeholder="Type your message here"></input>
+                            <RiSendPlaneFill onClick={sendMessage} className={`${s.icon} ${s.send} ${s.clickable}`}/>
                             {/*<i className="icon send clickable" aria-hidden="true"></i>*/}
                         </div>
                     </section>

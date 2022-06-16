@@ -7,8 +7,11 @@ import AuthModal from "../auth/AuthModal";
 import { useState } from "react";
 import { MdAddAPhoto } from "react-icons/md";
 import {request} from "../../redux/api";
+import {useNavigate} from "react-router-dom";
 
 function RegistModal({ setShow, show, setShowAuth }) {
+
+  const navigate = useNavigate();
 
   const [img, setImg] = useState();
   const [imgURL, setImgURL] = useState();
@@ -49,7 +52,7 @@ function RegistModal({ setShow, show, setShowAuth }) {
       formData.append("gender", data.gender)
       formData.append("avatar", img, img.name)
 
-      registration(formData, setShowAuth)
+      registration(formData, setShowAuth, navigate)
     },
   });
   localStorage.getItem("token") && setShow(false);
