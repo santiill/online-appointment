@@ -61,6 +61,10 @@
 .hour:hover {
     background: lightblue;
 }
+.hour:active {
+    background: red;
+}
+
 span.blue_box {
     padding: 0px 10px;
     background: blue;

@@ -13,6 +13,7 @@ import Appointments from "./components/otherPages/Appoints";
 import Review from "./components/otherPages/Review";
 import Chat from "./components/otherPages/chat/Chat";
 import Chat2 from "./components/otherPages/chat/Chat";
+import History from "./components/otherPages/History";
 
 const store = createStore(appointment, compose(applyMiddleware(thunk)));
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -24,6 +25,7 @@ root.render(
         <Routes>
           <Route path="/*" element={<App />} />
           <Route path="/appointments" element={<Appointments />} />
+          <Route path="/history" element={<History />} />
           <Route path="/review" element={<Review />} />
           <Route path="/chat" element={<Chat />} />
         </Routes>

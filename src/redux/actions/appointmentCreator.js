@@ -3,7 +3,7 @@ import {
   CHECK_HOURS,
   CHOOSE_DOCTOR,
   GET_ALL_APPOINTMENTS,
-  GET_DOCTORS_LIST,
+  GET_DOCTORS_LIST, GET_HISTORY,
 } from "../actionTypes";
 import { request } from "../api";
 
@@ -40,6 +40,15 @@ export const chooseADoctor = (doctor) => (dispatch) => {
   console.log("dddd: ", doctor);
   dispatch({ type: CHOOSE_DOCTOR, doctor: doctor });
 };
+
+export const getHistory = () => (dispatch) => {
+  request.getHistoryApi().then(res => {
+    console.log("history: ", res);
+    dispatch({ type: GET_HISTORY, payload: res.data });
+  })
+
+};
+
 
 export const checkHours = (value, doctorId) => (dispatch) => {
   request.checkHoursApi(value, doctorId).then(res => {

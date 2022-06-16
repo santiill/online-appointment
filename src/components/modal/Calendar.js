@@ -59,7 +59,6 @@ const Calendarr = ({ next }) => {
                 </div>
                 <div className="hour_list">
                     {hours.map(hour => <button onClick={() => {setHdate(hour.workHour.replace("T", " ")); console.log(hour.workHour)}} disabled={!hour.available} className={hour.available ? "hour" : "blue_hour"}>{hour.workHour.slice(11, 17)}</button>)}
-
                 </div>
             </div>
         </div>

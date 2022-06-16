@@ -8,7 +8,7 @@ const Appointments = ({ next }) => {
   return (
     <>
       <div className="mt-4 appoints">
-        <h5 className="text-center">Записи</h5>
+        <h5 className="text-center">Ближайшие записи</h5>
         <ol>
           {states.map((item) => {
             const t = item.attendingDoctor;

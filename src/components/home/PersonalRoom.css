@@ -37,7 +37,7 @@
 }
 .room_icon {font-size: 25px;margin-right: 10px;}
 
-.room_menu__item:hover {background: #749ca8;color: #f1f2f2;/* padding: 20px 40px; */
+.room_menu__item:hover {background: #9ab4f5;color: #f1f2f2;/* padding: 20px 40px; */
     border-radius: 4px;
     color: white;
     /* padding: 8px 40px; */
@@ -56,7 +56,7 @@ a.activeL {
     display: flex;
     align-items: center;
     padding: 25px 20px 29px 25px;
-    background: #749ca8;
+    background: #799aeb;
     color: #f1f2f2;
 }
 .room_menu__item, a.link_router {

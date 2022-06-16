@@ -18,6 +18,7 @@ export const request = {
   getDoctorsList: () => API.get("api/doctor"),
   doAppointmentApi: (data) => API.post("api/appointment", data),
   getAllAppointmentsApi: (data) => API.get(`/api/appointment/policy/${data}`),
-  checkHoursApi: (date, doctorId) => API.get('api/work-hour/check', { params: { date: date, id: doctorId } })
+  checkHoursApi: (date, doctorId) => API.get('api/work-hour/check', { params: { date: date, id: doctorId } }),
+  getHistoryApi: () => API.get("api/appointment/history")
   // doAppointmentsApi: (data) => API.post("appointment", data),
 };
