@@ -5,11 +5,7 @@ import s from "./Chat.module.css"
 import Header from "../../headers/Header";
 
 const Chat2 = () => {
-    const chatArr = [
-        "hdbfjshbfdksfnskfb",
-        "Youuuuuu",
-        "Heeeeeeey",
-    ]
+
     const [textArr, setTextArr] = useState([])
     const [inputValue, setInputValue] = useState("");
     const [value, setValue] = useState(" ");
@@ -24,7 +20,7 @@ const Chat2 = () => {
         setTextArr([...textArr, value])
         console.log(textArr)
         console.log(value)
-    }, [value])
+    }, [setValue])
 
     return (
         <>
@@ -40,58 +36,27 @@ const Chat2 = () => {
                         </div>
                         <div className={`${s.discussion} ${s.message_active}`}>
                             <div className={s.photo}
-                                 style={{backgroundImage: "url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"}}>
+                                 style={{backgroundImage: "url(https://ddcorlando.com/wp-content/uploads/2020/01/beautiful-young-female-doctor-looking-camera-office_1301-7781.jpg)"}}>
                                 <div className={s.online}></div>
                             </div>
                             <div className={s.desc_contact}>
-                                <p className={s.name}>Megan Leib</p>
+                                <p className={s.name}>Karina Anatolyevna</p>
                                 <p className={s.message}>9 pm at the bar if possible 😳</p>
                             </div>
                             <div className={s.timer}>12 sec</div>
                         </div>
-                        <div className={s.discussion}>
-                            <div className={s.photo}
-                                 style={{backgroundImage: "url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"}}>
-                                <div className={s.online}></div>
-                            </div>
-                            <div className={s.desc_contact}>
-                                <p className={s.name}>Megan Leib</p>
-                                <p className={s.message}>9 pm at the bar if possible 😳</p>
-                            </div>
-                            <div className={s.timer}>12 sec</div>
-                        </div>
-                        <div className={`${s.discussion} ${s.message_active}`}>
-                            <div className={s.photo}
-                                 style={{backgroundImage: "url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"}}>
-                                <div className={s.online}></div>
-                            </div>
-                            <div className={s.desc_contact}>
-                                <p className={s.name}>Megan Leib</p>
-                                <p className={s.message}>9 pm at the bar if possible 😳</p>
-                            </div>
-                            <div className={s.timer}>12 sec</div>
-                        </div>
-                        <div className={`${s.discussion} ${s.message_active}`}>
-                            <div className={s.photo}
-                                 style={{backgroundImage: "url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"}}>
-                                <div className={s.online}></div>
-                            </div>
-                            <div className={s.desc_contact}>
-                                <p className={s.name}>Megan Leib</p>
-                                <p className={s.message}>9 pm at the bar if possible 😳</p>
-                            </div>
-                            <div className={s.timer}>12 sec</div>
-                        </div>
+
+
                     </section>
                     <section className={s.chat}>
                         <div className={s.header_chat}>
                             {/*<i className="icon fa fa-user-o" aria-hidden="true"></i>*/}
-                            <p className={s.name}>Megan Leib</p>
+                            <p className={s.name}>Karina Anatolyevna</p>
                             {/*<i className="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>*/}
                         </div>
                         <div className={s.messages_chat}>
                             <div className={s.message}>
-                                <div className={s.photo} style={{backgroundImage: "url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"}}>
+                                <div className={s.photo} style={{backgroundImage: "url(https://ddcorlando.com/wp-content/uploads/2020/01/beautiful-young-female-doctor-looking-camera-office_1301-7781.jpg)"}}>
                                     <div className={s.online}></div>
                                 </div>
                                 <p className={s.text}> Hi, how are you ? </p>
@@ -112,7 +77,7 @@ const Chat2 = () => {
                             </div>
                             <p className={`${s.response_time} ${s.time}`}> 15h04</p>
                             <div className={s.message}>
-                                <div className={s.photo} style={{backgroundImage: "url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"}}>
+                                <div className={s.photo} style={{backgroundImage: "url(https://ddcorlando.com/wp-content/uploads/2020/01/beautiful-young-female-doctor-looking-camera-office_1301-7781.jpg)"}}>
                                     <div className={s.online}></div>
                                 </div>
                                 <p className={s.text}> 9 pm at the bar if possible 😳</p>
